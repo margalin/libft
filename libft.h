@@ -28,4 +28,8 @@ void	*ft_memcpy(void *d, const void *s, size_t ld);
 void	*ft_memmove(void *d, const void *s, size_t ls);
 size_t	ft_strlcpy(char *d, const char *s, size_t l);
 size_t	ft_strlcat(char *dst, const char *src, size_t l);
+int		ft_toupper(int c);
+int		ft_tolower(int c);
+char	*ft_strchr(const char *s, int c);
+char	*ft_strrchr(const char *s, int c);
 #endif

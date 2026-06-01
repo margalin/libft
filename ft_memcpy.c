@@ -1,21 +1,39 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: margalin <margalin@student.42malaga.com    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/06/01 09:10:54 by margalin          #+#    #+#             */
+/*   Updated: 2026/06/01 10:25:53 by margalin         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
-void *ft_memcpy(char *dst, const char *src, size_t ldst){
-    size_t i;
-    size_t lsrc;
+void	*ft_memcpy(void *dst, const void *src, size_t n)
+{
+	unsigned char		*d;
+	const unsigned char	*s;
+	size_t				i;
 
-    i = 0;
-    lsrc = ft_strlen(src);
-    if(ldst < 1){return(lsrc);}
-    while(src[i] != '\0' && i < (ldst - 1)){
-        dst[i] = src[i];
-        i++;}
-    dst[i] = '\0';
-    return(ldst);
+	i = 0;
+	if (!dst && !src)
+	{
+		return (NULL);
+	}
+	d = (unsigned char *)dst;
+	s = (const unsigned char *)src;
+	while (i < n)
+	{
+		d[i] = s[i];
+		i++;
+	}
+	return (dst);
 }
 
-// copiar en destino dst el string apuntado como area de memoria src y terminado por el valor nulo, devuelvo longitud destino
-// si el tamaño del destino es menor que 1 devuelvo el tamaño del origen, esto hace que no se solapen
-// mientras tenga puntero inicial y tamaño destino, copio dst en src y finalizo con nulo
-
-
+// copia n bytes de memoria desde src hacia dst, byte a
+// byte sin importar el contenido si ambos punteros son
+// NULL retorna NULL para evitar comportamiento indefinido
+// devuelve el puntero original dst

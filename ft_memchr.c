@@ -6,7 +6,7 @@
 /*   By: margalin <margalin@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/01 12:56:41 by margalin          #+#    #+#             */
-/*   Updated: 2026/06/01 13:07:44 by margalin         ###   ########.fr       */
+/*   Updated: 2026/06/01 14:29:34 by margalin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,6 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	i = 0;
 	value = (unsigned char)c;
 	str = (unsigned char *)s;
-
 	while (i < n)
 	{
 		if (str[i] == value)

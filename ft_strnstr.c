@@ -6,7 +6,7 @@
 /*   By: margalin <margalin@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/01 14:47:20 by margalin          #+#    #+#             */
-/*   Updated: 2026/06/01 15:03:21 by margalin         ###   ########.fr       */
+/*   Updated: 2026/06/01 15:51:41 by margalin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	i = 0;
 	if (little[0] == '\0')
 		return ((char *)big);
-	while (j < len && big[i])
+	while (i < len && big[i])
 	{
 		j = 0;
 		while (little[j] && big[i + j] == little[j] && (i + j) < len)
@@ -34,3 +34,9 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	return (NULL);
 }
 // localizar un substring en string
+// comprobar que el string a buscar no es vacio: en ese caso devuelve el grande
+// mientras i sea menor que el tamaño de caracteres a buscar 
+// si hay pequeño, es igual al grande y el tamaño sigue siendo más pequeño que 
+// el que queremos buscar actualizo j, hago i + j para no actualizar el valor 
+// de i y al salir del bucle poder saber cuál es el primer carácter que se
+// repite y poder apuntar a él.

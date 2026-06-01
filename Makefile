@@ -27,7 +27,10 @@ MY_SOURCES =ft_isdigit.c\
 						ft_strnstr.c\
 						ft_atoi.c\
 						ft_calloc.c\
-						ft_strdup.c
+						ft_strdup.c\
+						ft_substr.c\
+						ft_putchar_fd.c\
+						ft_putstr_fd.c
 OBJS = $(MY_SOURCES:.c=.o) # una variable cuya dependencia es convertir los . c en .o
 
 $(NAME) : $(OBJS)

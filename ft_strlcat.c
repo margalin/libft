@@ -6,7 +6,7 @@
 /*   By: margalin <margalin@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/01 09:11:14 by margalin          #+#    #+#             */
-/*   Updated: 2026/06/01 10:37:54 by margalin         ###   ########.fr       */
+/*   Updated: 2026/06/01 14:13:55 by margalin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,21 +20,16 @@ size_t	ft_strlcat(char *dst, const char *src, size_t l)
 
 	ldst = ft_strlen(dst);
 	lsrc = ft_strlen(src);
-	i = 0;
-	if (ldst == 0)
-		return (lsrc);
-	if (ldst <= lsrc)
+	if (l <= ldst)
 		return (lsrc + l);
-	else
-		lsrc += ldst;
-	while (src[i] && ldst < (l - 1) && dst != src)
+	i = 0;
+	while (src[i] && (ldst + i + 1) < l)
 	{
-		dst[ldst] = src[i];
+		dst[ldst + i] = src[i];
 		i++;
-		ldst++;
 	}
-	dst[ldst] = '\0';
-	return (lsrc);
+	dst[ldst + i] = '\0';
+	return (lsrc + ldst);
 }
 // Añade el string terminado en nulo src a dst y devuelve
 // el tamaño total. Tamaño que será src+dst, l = tamaño

@@ -1,22 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: margalin <margalin@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/06/01 10:50:50 by margalin          #+#    #+#             */
-/*   Updated: 2026/06/01 14:19:12 by margalin         ###   ########.fr       */
+/*   Created: 2026/06/01 12:56:41 by margalin          #+#    #+#             */
+/*   Updated: 2026/06/01 13:07:44 by margalin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_toupper(int c)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-	if (c >= 97 && c <= 122)
-		return (c - 32);
-	return (c);
+	unsigned char	value;
+	unsigned char	*str;
+	size_t			i;
+
+	i = 0;
+	value = (unsigned char)c;
+	str = (unsigned char *)s;
+
+	while (i < n)
+	{
+		if (str[i] == value)
+			return ((void *)&str[i]);
+		i++;
+	}
+	return (NULL);
 }
-//convierte de minusculas a mayusculas
-//en caso de no ser minusculas devuelve lo introducido
+// escanea los n bytes de memoria apuntados por s en busca
+// de la primera c. c y n son unsigned char
+// devuelve puntero a al byte o NULL si no ocurre

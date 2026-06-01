@@ -12,10 +12,10 @@
 
 #include "libft.h"
 
-int	ft_isdigit(int digit)
+int	ft_isprint(int print)
 {
-	if (digit >= 48 && digit <= 57)
+	if (print >= 32 && print <= 126)
 		return (1);
 	return (0);
 }
-// si el valor introducido es un numero devuelve 1
+// si el valor introducido es un imprimible devuelve 1

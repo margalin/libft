@@ -70,4 +70,5 @@ No realizada.
 - `man` : Página manual de cada función original
 - Documentación del proyecto : el mismo pdf de información
 - Peer to peer : preguntandole a compañeros que ya han hecho este proyecto, sobre todo para la Parte 2 en la que las funciones no tienen su propio manual 
+- Reuniones grupales por senseis : charlas formativas en las instalaciones de 42 para entender el funcionamiento de archivos como Makefile o las listas enlazadas.
 - IA : para detectar errores durante la implementación como bucles infinitos o leaks y para generar las funciones main y poder comprobar su correcto funcionamiento

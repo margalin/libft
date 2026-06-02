@@ -1,6 +1,6 @@
 NAME = libft.a
 
-CC = gcc # compilador
+cc = gcc # compilador
 CCFLAGS = -Wall -Wextra -Werror #flags
 RM = rm -rf # borrar
 
@@ -33,7 +33,6 @@ MY_SOURCES =ft_isdigit.c\
 						ft_putstr_fd.c\
 						ft_putnbr_fd.c\
 						ft_putendl_fd.c\
-						ft_strmapi.c\
 						ft_strmapi.c\
 						ft_striteri.c\
 						ft_strjoin.c\

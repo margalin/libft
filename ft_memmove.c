@@ -6,7 +6,7 @@
 /*   By: margalin <margalin@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/01 09:11:00 by margalin          #+#    #+#             */
-/*   Updated: 2026/06/01 10:19:19 by margalin         ###   ########.fr       */
+/*   Updated: 2026/06/02 06:48:03 by margalin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ void	*ft_memmove(void *dst, const void *src, size_t l)
 	return (destination);
 }
 // copiar en destino dst el string apuntado como area de memoria src y 
-//terminado por el valor nulo, devuelvo longitud destino
+//terminado por el valor nulo, devuelvo puntero a destino
 // a diferencia de memcpy = puede haber solapamiento. Si el destino es 
 //mayor que el origen, copia src en dst
 // creo punteros para almacenar parametros de entrada y poder comparar 

@@ -6,7 +6,7 @@
 /*   By: margalin <margalin@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/01 18:22:40 by margalin          #+#    #+#             */
-/*   Updated: 2026/06/02 07:05:01 by margalin         ###   ########.fr       */
+/*   Updated: 2026/06/02 07:09:22 by margalin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,3 +40,4 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	return (s3);
 }
 //añade s1 despues de s2 y devuelve la nueva cadena o NULL si falla
+//comprobamos las entradas y creamos s3

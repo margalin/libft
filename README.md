@@ -61,10 +61,10 @@ No realizada.
 	-> mediante `cc` con las flags `-Wall -Werror -Wextra` y `ar`.
 
 - Para Makefile:
-	-> `make` / `make all` — compila `libft.a`.
-	-> `make clean` — elimina los archivos objeto (`.o`).
-	-> `make fclean` — elimina los `.o` y `libft.a`.
-	->`make re` — recompila todo desde cero.
+	- `make` / `make all` — compila `libft.a`.
+	- `make clean` — elimina los archivos objeto (`.o`).
+	- `make fclean` — elimina los `.o` y `libft.a`.
+	-`make re` — recompila todo desde cero.
 
 ## RECURSOS
 - `man` : Página manual de cada función original

@@ -1,9 +1,8 @@
 NAME = libft.a
 
-cc = gcc # compilador
-CCFLAGS = -Wall -Wextra -Werror #flags
-RM = rm -rf # borrar
-
+CC = cc
+CCFLAGS = -Wall -Wextra -Werror
+RM = rm -rf
 
 MY_SOURCES =ft_isdigit.c\
 						ft_isalnum.c\
@@ -38,19 +37,33 @@ MY_SOURCES =ft_isdigit.c\
 						ft_strjoin.c\
 						ft_strtrim.c\
 						ft_itoa.c\
-						ft_split.c
-OBJS = $(MY_SOURCES:.c=.o) # una variable cuya dependencia es convertir los . c en .o
+						ft_split.c\
+						ft_lstnew.c\
+						ft_lstadd_front.c\
+						ft_lstsize.c\
+						ft_lstlast.c\
+						ft_lstadd_back.c\
+						ft_lstdelone.c\
+						ft_lstclear.c\
+						ft_lstiter.c\
+						ft_lstmap.c
 
-$(NAME) : $(OBJS)
-	ar crs $(NAME) $(OBJS) # crear el ejecutable
+OBJS = $(MY_SOURCES:.c=.o)
+
+$(NAME): $(OBJS)
+	ar crs $(NAME) $(OBJS)
 
 all: $(NAME)
 
-%.o : %.c libft.h
-	@$(CC) $(CCFLAGS) -c -o $@ $< # indicadores
+%.o: %.c libft.h
+	$(CC) $(CCFLAGS) -c $< -o $@
+
 clean:
-	@$(RM) $(OBJS)
+	$(RM) $(OBJS)
+
 fclean: clean
-	@rm -f $(NAME)
-re: fclean all # limpiar y recompilar todo
+	$(RM) $(NAME)
+
+re: fclean all
+
 .PHONY: all clean fclean re

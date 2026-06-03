@@ -33,7 +33,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	c[i] = '\0';
 	return (c);
 }
-//aplica la funcion f a cada caracter de la cadena s, devuelve la cadena creada 
-//tras aplicar f, NULL si falla memoria
+// aplica la funcion f a cada caracter de la cadena s, devuelve la cadena creada 
+// tras aplicar f, NULL si falla memoria
 // creamos c para guardar s despues de f y comprobamos que se ha creado bien
 // mientras haya s, le aplicamos f y guardamos en c terminando en vacio
